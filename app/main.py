@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 
 def clean_data():
     # import data
-    data = pd.read_csv("data\data.csv")
+    data = pd.read_csv("data.csv")
 
     # clean data
     data = data.drop(["Unnamed: 32", "id"], axis=1)
@@ -19,7 +19,7 @@ def add_side_bar():
     st.sidebar.header("Data Features")
 
     # Get the labels for the slider
-    data = pd.read_csv("data\data.csv")
+    data = pd.read_csv("data.csv")
     data = data.drop(["Unnamed: 32", "id", "diagnosis"], axis=1)
 
     data_labels = data.columns.tolist()
